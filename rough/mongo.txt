@@ -1,0 +1,58 @@
+As a document-oriented database, MongoDB is a more
+generalized NoSQL solution.
+
+Set up the system.
+
+- Download the msi file.
+
+note : Don’t execute anything just yet,
+but know that MONGOD is the server process and MONGO is the client shell.
+
+- got to c:programfiles/mongodb/server/3.4/bin/
+
+-add a mongod.config file
+
+-dbpath=c:/xampp/htdocs/mongo
+
+-and then on c:/programfiles/..../bin mongod --config path to config files.
+
+-c:/programfiles/..../bin mongo
+
+2.)Within a MongoDB instance you can have zero or more databases, each acting as high-level
+containers for everything else
+
+3.) A collection shares enough in common with a traditional table
+that you can safely think of the two as the same thing.
+
+4.)Collections are made up of zero or more documents. Again, a document can safely be thought of as a row
+
+5.)A document is made up of one or more fields, which you can probably guess are a lot like columns
+
+In sql table > rows > columns
+
+in mongo collections > documents > fields.
+
+6.)commands db.help();
+db.stats() tells what all of the file and collections are there.
+
+7.)mongo shell runs on javascript so, always put () after the function otherwise you will get the body.
+
+8.)db.unicorns.insert({name: 'Aurora',
+gender: 'f', weight: 450});
+
+Bson - binary serialized json format.
+
+
+9.) You can now use the find command against unicorns to return a list of documents:
+db.unicorns.find()
+to get all the rows / documents.
+
+10.)db.unicorns.insert({name: 'Leto',
+12
+gender: 'm',
+home: 'Arrakeen',
+worm: false})
+
+db.unicorns.find() - you will see two different rows.
+
+11.)to remove db.name.remove({});
